@@ -6,8 +6,6 @@ const app = express();
 app.use(express.json());
 dotenv.config();
 
-console.log("Redis password:", process.env.REDIS_PASSWORD);
-
 const port = 5555;
 
 let redisClient = null;
