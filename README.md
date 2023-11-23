@@ -1,3 +1,7 @@
+# How to setup project
+- rename .env.example file to .env
+- change "my_redis_password" in .env to your redis password
+
 # How to run Docker
 
 ```
@@ -13,7 +17,6 @@ docker-compose down
 # How to run Server
 
 ```
-cd server
 npm i
 node index.js
 ```

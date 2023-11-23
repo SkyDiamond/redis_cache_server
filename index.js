@@ -1,9 +1,12 @@
 const express = require("express");
 const redis = require("redis");
-
+const dotenv = require("dotenv");
 const app = express();
 
 app.use(express.json());
+dotenv.config();
+
+console.log("Redis password:", process.env.REDIS_PASSWORD);
 
 const port = 5555;
 
@@ -13,7 +16,7 @@ const initRedis = async () => {
   redisClient = redis.createClient({
     host: "redis-server",
     port: 6379,
-    password: "eYVX7EwVmmxKPCDmwMtyKVge8oLd2t81"
+    password: process.env.REDIS_PASSWORD,
   });
   redisClient.on("error", (err) => console.log("Redis error:", err));
   await redisClient.connect();
