@@ -1,13 +1,13 @@
 # How to run Docker
 
 ```
-docker-composr up -d
+docker-compose up -d
 ```
 
 # How to down Docker
 
 ```
-docker-composr down
+docker-compose down
 ```
 
 # How to run Server
